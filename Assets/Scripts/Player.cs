@@ -18,5 +18,22 @@ public class Player : MonoBehaviour
     void Update()
     {
         transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * speed * Time.deltaTime;
+
+        if (transform.position.x > 8.35f)
+        {
+            transform.position = new Vector3(8.35f, transform.position.y, transform.position.z);
+        }
+        if (transform.position.x < -8.35f)
+        {
+            transform.position = new Vector3(-8.35f, transform.position.y, transform.position.z);
+        }
+        if (transform.position.y > 4.35f)
+        {
+            transform.position = new Vector3(transform.position.x, 4.35f, transform.position.z);
+        }
+        if (transform.position.y < -4.35f)
+        {
+            transform.position = new Vector3(transform.position.x, -4.35f, transform.position.z);
+        }
     }
 }
