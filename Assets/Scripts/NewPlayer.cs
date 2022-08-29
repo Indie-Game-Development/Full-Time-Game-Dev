@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewPlayer : MonoBehaviour
+public class NewPlayer : PhysicsObject
 {
+    [SerializeField]
+    private float maxSpeed = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,11 @@ public class NewPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        targetVelocity = new Vector2(Input.GetAxis("Horizontal"), 0) * maxSpeed;
+
+        if (Input.GetButton("Jump") && grounded)
+        {
+            velocity.y = 10;
+        }
     }
 }
