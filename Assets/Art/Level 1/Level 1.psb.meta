@@ -111,7 +111,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2076, y: -1310}
+    uvTransform: {x: 2120, y: -1416}
   - name: Ground1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
